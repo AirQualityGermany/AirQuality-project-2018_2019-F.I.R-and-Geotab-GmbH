@@ -7,7 +7,7 @@ What you will need:
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
 - 1 x microSD card (at least 8 GB)
-- 1 x Molex 51021-0800 pigtail
+- 1 x Molex 51021-0800 pigtail ([for example](https://www.mouser.de/))
 - DuPont female-female jumper cables ([for example](https://www.amazon.de/Aukru-20cm-female-female-Steckbr%C3%BCcken-Drahtbr%C3%BCcken/dp/B00OL6JZ3C))
 - USB-to-MicroUSB cable
 - 5V power source
