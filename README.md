@@ -32,11 +32,11 @@ What you will need:
 ## Hooking up the sensors
 ### BME280
 1. Solder the headers to the sensor PCB as shown in https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/assembly
-2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5
-- Pi *3V3* to sensor *VIN*
-- Pi *GND* to sensor *GND*
-- Pi *SCL* (GPIO 3) to sensor *SCK*
-- Pi *SDA* (GPIO 2) to sensor *SDI*
+2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Color code and Pinout examples for RASPI 3 Model B:
+- Pi *3V3* to sensor *VIN* (PIN 1, red cable)
+- Pi *GND* to sensor *GND* (PIN 9, Brown cable)
+- Pi *SCL* (GPIO 3) to sensor *SCK* (PIN 5, Orange cable)
+- Pi *SDA* (GPIO 2) to sensor *SDI* (PIN 3, Yellow cable)
 
 ### Honeywell HPMA115S0
 1. To make the wiring more straightforward, create a Molex-DuPont connector cable for the sensor. (Please see the [Datasheet](http://www.farnell.com/datasheets/2313714.pdf) for reference.)
