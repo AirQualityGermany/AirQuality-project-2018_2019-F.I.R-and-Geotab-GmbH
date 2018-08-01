@@ -25,7 +25,7 @@ What you will need:
   - set a unique hostname
   - set up the WLAN network
   - set the correct time zone and WiFi country
-  - configure the necessary interfaces (SSH is already enabled, I2C needs to be turned on, shell output on the Serial interface needs to be *disabled*)
+  - configure the necessary interfaces (SSH is already enabled, I2C needs to be turned on, shell output on the Serial interface needs to be *disabled*, but the Serial interface should be kept enabled)
   - expand the file system
 7. If you're done with the configuration, restart the Pi with **sudo reboot now**. Check if all the changes are correct, then shut down it with **sudo shutdown now**, and remove the power cable.
 
@@ -55,6 +55,6 @@ What you will need:
 3. Install the Adafruit BME280 library: https://github.com/adafruit/Adafruit_Python_BME280
 4. Install the PySerial library: **pip install pyserial**
 5. Install the ThingType HPMA115S0 library: https://github.com/ThingType/HPMA115S0_Python_library ([Detailed documentation](https://thingtype.com/blog/using-an-hpma115s0-air-particles-sensor-with-a-raspberry-pi/))
-6. Download the *sensortest.py* script from this repository and run it, to check if everything works as expected: **python sensortest.py**
+6. Create a file named `__init__`.py in the Adafruit_Python_BME280 and the HPMA115S0_Python directories, to make the importable in python. Download the *sensortest.py* script from this repository to the directory, where the subfolders of the libreries are located. Run it, to check if everything works as expected: **python sensortest.py**
 
 If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
