@@ -1,7 +1,7 @@
 # Cooperation-RWTH-and-Geotab
 Repository created to host any SW development activities around the Air Quality project between f.i.r and Geotab
 
-# Building the sensor node
+# Building the sensor node (Prototypes #1-#4)
 What you will need:
 - 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
