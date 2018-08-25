@@ -55,6 +55,6 @@ What you will need:
 3. Install the Adafruit BME280 library: https://github.com/adafruit/Adafruit_Python_BME280 (same here)
 4. Install the PySerial library: **pip install pyserial**
 5. Install the ThingType HPMA115S0 library: https://github.com/ThingType/HPMA115S0_Python_library (use **git clone**; [Detailed documentation](https://thingtype.com/blog/using-an-hpma115s0-air-particles-sensor-with-a-raspberry-pi/))
-6. Create a file (via **touch**) named `__init__`.py in the Adafruit_Python_BME280 and the HPMA115S0_Python directories, to make the importable in python. Download the *sensortest.py* script from this repository to the directory, where the subfolders of the libreries are located. Run it, to check if everything works as expected: **python sensortest.py**
+6. Create a file (via **touch**) named `__init__`.py in the Adafruit_Python_BME280 and the HPMA115S0_Python directories, to make the importable in python. Download the *sensortest.py* script from this repository to the directory, where the subfolders of the libraries are located. Run it, to check if everything works as expected: **python sensortest.py**
 
 If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
