@@ -63,9 +63,9 @@ What you will need:
 If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
 
 # Creating the sensor node
-With the help of a 3D printer, enclosures for the prototype sensors have been designed and continue to be work in progress. The housing can be connected to various base plates that would allow simple connection of the sensor to bicycles, cars and other mobile vehicles.
+With the help of a 3D printer, enclosures for the prototype sensors have been designed and remain work in progress. The housing is expected to be mounted to various mobile devices. Various interfacing base plates should be designed to allow for simple connection of the sensor to bicycles, cars and other mobile vehicles.
 
-## STL files##
+## STL files
 1. Interface plate [vehicle](https://www.tinkercad.com/things/4Xz4JrNgmcE/editv2?sharecode=PCdHlDFncot4dArcW4hcWTQBgAOv3JHcGKH7myIfJUY=)
 2. Interface plate bicycle [steering tube 57.2mm](https://www.tinkercad.com/things/jzmpo4tGQez/editv2?sharecode=1q4hmiGckp7A3iOZSZWTwA4aEF93UhBmeYaSY_0_uzE=)
 3. Interface plate bicycle [seat post. 27.3mm](https://www.tinkercad.com/things/e2KdwUPzHp4-air-quality-bottom-adaptor-bike-seat-post-273mm/editv2?sharecode=tH-ZwkKY2VoDqsauvy4q2hLqFmQomjW-M0TOkkHZojo=)
@@ -73,6 +73,17 @@ With the help of a 3D printer, enclosures for the prototype sensors have been de
 5. Cover RASPI [3 model B](https://www.tinkercad.com/things/88hw1V2CLJA/editv2?sharecode=Jthvr0qztWBviDRTiyt8R4J0hbHZ-XgIrdv957fNIdI=)
 6. Cover [BME and HONEYWELL sensor](https://www.tinkercad.com/things/6zZtiDeTbDL/editv2?sharecode=hv0o3lNThIFnXw16Q4WmttxLdtT7ksC8-y0OA-khdSg=)
 
-# Collection of real time data
+## Other material
+- hot glue
+- double side tape
+- cable ties
+- magnets (e.g. from old HDD's)
+- shrinking tube
+- ....
+
+# Collection of real time data using **airq_logger.py**
+to be added
+
+# Making the sensor mobile, i.e. power plug independent
 to be added
 
