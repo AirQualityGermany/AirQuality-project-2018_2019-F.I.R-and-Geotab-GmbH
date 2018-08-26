@@ -81,7 +81,7 @@ With the help of a 3D printer, enclosures for the prototype sensors have been de
 - shrinking tube
 - ....
 
-# Collection of real time data using **airq_logger.py**
+# Collection of real time data using *airq_logger.py*
 to be added
 
 # Making the sensor mobile, i.e. power plug independent
