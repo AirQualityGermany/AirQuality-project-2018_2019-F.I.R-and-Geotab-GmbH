@@ -23,7 +23,7 @@ What you will need:
   - Option: Assuming that you are not having an Ethernet connection but you would be able to connect the RASPI via HDMI and Keyboard/Mouse, you could set up the WIFI connection right away (using **sudo raspi-config**). Once the WIFI is up and running, use **ifconfig** to determine the IP address necessary to connect via the PUTTY terminal.
 6. If you've successfully logged in, please finalize the configuration of your Pi with the [raspi-config](https://www.raspberrypi.org/documentation/configuration/raspi-config.md) tool: **sudo raspi-config**. It's important to:
   - change the user password
-  - set a unique hostname
+  - set a unique hostname (current naming convention would be AirQuality_Sensor_x with x=1 (Maker Aachen), 2 (Geotab DE), 3 (F.i.R Aachen), 4 (Geotab CA)
   - set up the WLAN network
   - set the correct time zone and WiFi country
   - configure the necessary interfaces (SSH is already enabled, I2C needs to be turned on, shell output on the Serial interface needs to be *disabled*, but the Serial interface should be kept enabled)
