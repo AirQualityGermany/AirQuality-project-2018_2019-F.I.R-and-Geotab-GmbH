@@ -58,7 +58,9 @@ What you will need:
 5. Install the ThingType HPMA115S0 library: https://github.com/ThingType/HPMA115S0_Python_library (use **git clone**; [Detailed documentation](https://thingtype.com/blog/using-an-hpma115s0-air-particles-sensor-with-a-raspberry-pi/))
 6. Create a file (via **touch**) named `__init__`.py in the Adafruit_Python_BME280 and the HPMA115S0_Python directories, to make the importable in python. 
   - **Attention (status Aug 26 2018)**: The directory name HPMA115S0_Python_library has to be changed manually to HPMA115S0_Python.
-7. Download the *sensortest.py* script from this repository. Ensure that the test file is stored inside the same directory that holds the ADAFRUIT and HPMA libraries as well. Run it, to check if everything works as expected: **python sensortest.py**. Use CTRL-C to exit the program.
+7. Download the *sensortest.py* script from this repository. Ensure that the test file is stored inside the same directory that holds the ADAFRUIT and HPMA libraries as well. 
+- Depending on your command skills, use either **wget** to transfer the file or **git clone** to copy the complete directory onto the RASPI.
+8. Run it, to check if everything works as expected: **python sensortest.py**. Use CTRL-C to exit the program.
 
 If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
 
@@ -79,6 +81,8 @@ With the help of a 3D printer, enclosures for the prototype sensors have been de
 - cable ties
 - magnets (e.g. from old HDD's)
 - shrinking tube
+- USB car adapter and cable (long) for in-vehicle 12V power supply
+- USB power bank and cable (short) for any mobile utilization
 - ....
 
 # Collection of real time data using *airq_logger.py*
