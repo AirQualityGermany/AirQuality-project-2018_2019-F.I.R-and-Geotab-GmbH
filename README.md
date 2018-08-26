@@ -71,7 +71,7 @@ With the help of a 3D printer, enclosures for the prototype sensors have been de
 1. Interface plate [vehicle](https://www.tinkercad.com/things/4Xz4JrNgmcE/editv2?sharecode=PCdHlDFncot4dArcW4hcWTQBgAOv3JHcGKH7myIfJUY=)
 2. Interface plate bicycle [steering tube 57.2mm](https://www.tinkercad.com/things/jzmpo4tGQez/editv2?sharecode=1q4hmiGckp7A3iOZSZWTwA4aEF93UhBmeYaSY_0_uzE=)
 3. Interface plate bicycle [seat post. 27.3mm](https://www.tinkercad.com/things/e2KdwUPzHp4-air-quality-bottom-adaptor-bike-seat-post-273mm/editv2?sharecode=tH-ZwkKY2VoDqsauvy4q2hLqFmQomjW-M0TOkkHZojo=)
-4. Base plate RASPI 3 model B
+4. Base plate [RASPI 3 model B](https://www.tinkercad.com/things/1gGCnCky6An-spectacular-allis/edit?&sharecode=RH8EePABKeKxCpGJCp6Acry-V-7am-ZyMxsMLUgiqa0=)
 5. Cover RASPI [3 model B](https://www.tinkercad.com/things/88hw1V2CLJA/editv2?sharecode=Jthvr0qztWBviDRTiyt8R4J0hbHZ-XgIrdv957fNIdI=)
 6. Cover [BME and HONEYWELL sensor](https://www.tinkercad.com/things/6zZtiDeTbDL/editv2?sharecode=hv0o3lNThIFnXw16Q4WmttxLdtT7ksC8-y0OA-khdSg=)
 
