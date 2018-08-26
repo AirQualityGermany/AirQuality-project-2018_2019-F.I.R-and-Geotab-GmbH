@@ -58,6 +58,21 @@ What you will need:
 5. Install the ThingType HPMA115S0 library: https://github.com/ThingType/HPMA115S0_Python_library (use **git clone**; [Detailed documentation](https://thingtype.com/blog/using-an-hpma115s0-air-particles-sensor-with-a-raspberry-pi/))
 6. Create a file (via **touch**) named `__init__`.py in the Adafruit_Python_BME280 and the HPMA115S0_Python directories, to make the importable in python. 
   - **Attention (status Aug 26 2018)**: The directory name HPMA115S0_Python_library has to be changed manually to HPMA115S0_Python.
-7. Download the *sensortest.py* script from this repository to the directory, where the subfolders of the libraries are located. Run it, to check if everything works as expected: **python sensortest.py**. Use CTRL-C to exit the program.
+7. Download the *sensortest.py* script from this repository. Ensure that the test file is stored inside the same directory that holds the ADAFRUIT and HPMA libraries as well. Run it, to check if everything works as expected: **python sensortest.py**. Use CTRL-C to exit the program.
 
 If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
+
+# Creating the sensor node
+With the help of a 3D printer, enclosures for the prototype sensors have been designed and continue to be work in progress. The housing can be connected to various base plates that would allow simple connection of the sensor to bicycles, cars and other mobile vehicles.
+
+## STL files##
+1. Interface plate vehicle
+2. Interface plate bicycle (bar handle post)
+3. Interface plate bicycle (seat post. 27.3mm) - <iframe width="450" height="280" src="https://www.tinkercad.com/embed/e2KdwUPzHp4?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">< /iframe>
+4. Base plate RASPI 3 model B
+5. Cover RASPI 3 model B
+6. Cover BME and HONEYWELL sensor
+
+# Collection of real time data
+to be added
+
