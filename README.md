@@ -50,7 +50,7 @@ What you will need:
 - Pi *TXD* (GPIO 14, PIN 8) to sensor *Pin 7*, white cable
 - Pi *GND* (PIN 4) to sensor *Pin 8*, black cable
 
-## Testing the sensors
+## Testing the sensors using *sensortext.py*
 1. Boot up your Pi again, log in via SSH, and update it with the following command: **sudo apt-get update && sudo apt-get upgrade**
 2. Install the Adafruit Python GPIO library: https://github.com/adafruit/Adafruit_Python_GPIO (check link for installation instructions)
 3. Install the Adafruit BME280 library: https://github.com/adafruit/Adafruit_Python_BME280 (you can now use **git clone** command to install this library.)
@@ -58,6 +58,6 @@ What you will need:
 5. Install the ThingType HPMA115S0 library: https://github.com/ThingType/HPMA115S0_Python_library (use **git clone**; [Detailed documentation](https://thingtype.com/blog/using-an-hpma115s0-air-particles-sensor-with-a-raspberry-pi/))
 6. Create a file (via **touch**) named `__init__`.py in the Adafruit_Python_BME280 and the HPMA115S0_Python directories, to make the importable in python. 
   - **Attention (status Aug 26 2018)**: The directory name HPMA115S0_Python_library has to be changed manually to HPMA115S0_Python.
-7. Download the *sensortest.py* script from this repository to the directory, where the subfolders of the libraries are located. Run it, to check if everything works as expected: **python sensortest.py**
+7. Download the *sensortest.py* script from this repository to the directory, where the subfolders of the libraries are located. Run it, to check if everything works as expected: **python sensortest.py**. Use CTRL-C to exit the program.
 
 If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
