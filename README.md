@@ -17,10 +17,11 @@ What you will need:
 ## Setting up the Raspberry Pi
 1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
 2. Write the image to the SD card by following the official guide at https://www.raspberrypi.org/documentation/installation/installing-images/README.md
-3. Create an empty file named "ssh" on the boot partition of the microSD card (to enable the SSH server)
+3. Create an empty file named "ssh" (simple textfile) on the boot partition of the microSD card (to enable the SSH server)
 4. Plug the microSD card in the Raspberry Pi, connect it via Ethernet to your local network, and power it up using the microUSB cable
 5. After it's booted up, connect to the Pi via SSH (with an SSH client like [PuTTY](https://www.putty.org/)). To find out the Pi's IP address, please check the DHCP clients on your routers admin page. The default user/pass of the Pi is pi/raspberry.
-6. If you've successfully logged in, please configure your Pi with the [raspi-config](https://www.raspberrypi.org/documentation/configuration/raspi-config.md) tool: **sudo raspi-config**. It's important to:
+  Option: Assuming that you are not having an Ethernet connection but you would be able to connect the RASPI via HDMI and Keyboard/Mouse, you could set up the WIFI connection right away (using **sudo raspi-config**). Once the WIFI is up and running, use **ifconfig** to determine the IP address necessary to connect via the PUTTY terminal.
+6. If you've successfully logged in, please finalize the configuration of your Pi with the [raspi-config](https://www.raspberrypi.org/documentation/configuration/raspi-config.md) tool: **sudo raspi-config**. It's important to:
   - change the user password
   - set a unique hostname
   - set up the WLAN network
