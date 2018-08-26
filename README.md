@@ -68,7 +68,7 @@ With the help of a 3D printer, enclosures for the prototype sensors have been de
 ## STL files##
 1. Interface plate vehicle
 2. Interface plate bicycle (bar handle post)
-3. Interface plate bicycle (seat post. 27.3mm) - <iframe width="450" height="280" src="https://www.tinkercad.com/embed/e2KdwUPzHp4?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">< /iframe>
+3. Interface plate bicycle (seat post. 27.3mm)https://www.tinkercad.com/things/e2KdwUPzHp4-air-quality-bottom-adaptor-bike-seat-post-273mm/editv2?sharecode=tH-ZwkKY2VoDqsauvy4q2hLqFmQomjW-M0TOkkHZojo=
 4. Base plate RASPI 3 model B
 5. Cover RASPI 3 model B
 6. Cover BME and HONEYWELL sensor
