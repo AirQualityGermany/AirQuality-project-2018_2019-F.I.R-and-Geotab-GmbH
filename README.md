@@ -1,6 +1,13 @@
 # Cooperation-RWTH-and-Geotab
 Repository created to host any SW development activities around the Air Quality project between f.i.r and Geotab
 
+# Github -Working with Directories
+For this project files can be organized in directories. A new directory can be created using : 
+- Click on New File
+- Type a folder name folowed by "/" to go down into a subfolder.
+- Type '..' and then "/" to jump upwards one directory.
+- Use the backspace key to edit the parent directory's name. (https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser)
+
 # Building the sensor node (Prototypes #1-#4)
 What you will need:
 - 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
