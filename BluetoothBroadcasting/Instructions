@@ -10,3 +10,7 @@
   (Source: https://hackaday.io/project/10314-raspberry-pi-3-as-an-eddystone-url-beacon)
   
 # Bluetooth Payload
+
+The bluetooth payload transmits the sensor Informations. 
+The geotab sdk describes it here: https://geotab.github.io/sdk/hardware/addon-protocols/ble/
+Compatible bluetooth beacons are for example the BeWhere Beacons. They are able to transmit their sensor data (temperature, light, accelerometer) to the go7 devices.
