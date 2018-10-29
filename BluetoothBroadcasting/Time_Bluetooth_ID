@@ -1,0 +1,22 @@
+#!/bin/dash
+
+while true
+ do
+  #declaring variables
+  Second=$(date +"%S")
+  Minute=$(date +"%M")
+  Hour=$(date +"%H")
+  Datum=$(date +"%d" date +"%m" date +"%y")
+  Tag=$(date +"%d")
+  Monat=$(date +"%m")
+  Jahr=$(date +"%y")
+  
+  
+  echo "$Second is before "
+  #In the following line the time is encoded into the Bluetooth ID 
+  sudo hcitool -i hci0 cmd 0x08 0x0008 1E 02 01 1A 1A FF 4C 00 02 15 $Hour $Min$$Second AA  $Tag $Monat 20$Jahr DD DD EE AA EE FF EE EE 01 00 01 00 c5
+  sleep 1
+  # Every second a new ID is broadcasted 
+done
+
+#Script is endlessly repeating itself -> ^+"c" to stop running the script
