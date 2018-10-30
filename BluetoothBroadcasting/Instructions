@@ -11,6 +11,27 @@
   
 # Bluetooth Payload
 
+Die Byte-Sequenz, die die Anzeige beginnt, ist wie folgt:
+
+1E Number of bytes that follow in the advertisement 
+02 Number of bytes that follow in first AD structure 
+01 Flags AD type 
+1A Flags value 0x1A = 000011010 
+    bit 0 (OFF) LE Limited Discoverable Mode 
+    bit 1 (ON) LE General Discoverable Mode 
+    bit 2 (OFF) BR/EDR Not Supported 
+    bit 3 (ON) Simultaneous LE and BR/EDR to Same Device Capable (controller) 
+    bit 4 (ON) Simultaneous LE and BR/EDR to Same Device Capable (Host) 
+1A Number of bytes that follow in second (and last) AD structure 
+FF Manufacturer specific data AD type 
+4C Company identifier code LSB 
+00 Company identifier code MSB (0x004C == Apple) 
+02 Byte 0 of iBeacon advertisement indicator 
+15 Byte 1 of iBeacon advertisement indicator 
+
+https://stackoverrun.com/de/q/6055021
+
+
 The bluetooth payload transmits the sensor Informations. 
 The geotab sdk describes it here: https://geotab.github.io/sdk/hardware/addon-protocols/ble/
 Compatible bluetooth beacons are for example the BeWhere Beacons. They are able to transmit their sensor data (temperature, light, accelerometer) to the go7 devices.
