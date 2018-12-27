@@ -4,7 +4,7 @@ Repository created to host any SW development activities around the Air Quality 
 # Github -Working with Directories
 For this project files can be organized in directories. A new directory can be created using : 
 - Click on New File
-- Type a folder name folowed by "/" to go down into a subfolder.
+- Type a folder name, followed by "/" to go down into a subfolder.
 - Type '..' and then "/" to jump upwards one directory.
 - Use the backspace key to edit the parent directory's name. (https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser)
 
