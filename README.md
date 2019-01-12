@@ -18,7 +18,12 @@ Sensors
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
 - 1 x [SGX Sensortech MICS-2714 or -4514 or -6414 gas sensors](https://www.sgxsensortech.com/sensor-selector/)
-  - you can shop via cooking hacks, or Banggod
+  - [e-Bay](www.e-bay.com)
+    - (search for MICS-6814 Carbon Monoxide Nitrogen Oxygen Compact Sensor CO/NO2/NH3 Gas Sensor)
+  - Banggood 
+    - (search for)
+  - [Cooking Hacks](https://www.cooking-hacks.com/no2-gas-sensor-7596)
+  - 
 
 Other
 - 1 x microSD card (at least 8 GB, RASPI only)
