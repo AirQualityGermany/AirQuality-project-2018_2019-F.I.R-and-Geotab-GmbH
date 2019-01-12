@@ -19,11 +19,11 @@ Sensors
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
 - 1 x [SGX Sensortech MICS-2714 or -4514 or -6414 gas sensors](https://www.sgxsensortech.com/sensor-selector/)
   - [e-Bay](www.e-bay.com)
-    - (search for MICS-6814 Carbon Monoxide Nitrogen Oxygen Compact Sensor CO/NO2/NH3 Gas Sensor)
-  - Banggood 
-    - (search for)
+    - (search for MICS-6814 Carbon Monoxide Nitrogen Oxygen Compact Sensor CO/NO2/NH3 Gas Sensor or similar)
+  - [Banggood](www.banggood.com)
+    - (search for "CJMCU-4541 MICS-4514 Carbon Monoxide Nitrogen Oxygen Sensor CO/NO2/H2/NH3/CH4" or similar)
   - [Cooking Hacks](https://www.cooking-hacks.com/no2-gas-sensor-7596)
-  - 
+  - Alternative companies offer a variety of individual boards (e.g. SEEED, LIBELIUM etc.) where it seems that any board related to detecting NO2 or similar gases is making use of the SGX Senortech sensors.
 
 Other
 - 1 x microSD card (at least 8 GB, RASPI only)
