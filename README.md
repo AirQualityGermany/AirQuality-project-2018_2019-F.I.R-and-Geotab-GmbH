@@ -17,7 +17,7 @@ Processors
 Sensors
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
-- 1 x [MICS-2714 or -4514 or -6414 gas sensor] (https://www.sgxsensortech.com/sensor-selector/)
+- 1 x [MICS-2714 or -4514 or -6414 gas sensor](https://www.sgxsensortech.com/sensor-selector/)
 
 Other
 - 1 x microSD card (at least 8 GB, RASPI only)
