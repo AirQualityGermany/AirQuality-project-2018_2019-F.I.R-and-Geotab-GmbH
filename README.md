@@ -10,6 +10,7 @@ For this project files can be organized in directories. A new directory can be c
 
 # Building the sensor node (Prototypes #1-#4)
 What you will need:
+
 Processors
 - 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 Sensors
