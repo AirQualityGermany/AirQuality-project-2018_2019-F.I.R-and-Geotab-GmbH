@@ -8,11 +8,12 @@ For this project files can be organized in directories. A new directory can be c
 - Type '..' and then "/" to jump upwards one directory.
 - Use the backspace key to edit the parent directory's name. (https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser)
 
-# Building the sensor node (Prototypes #1-#4)
+# Building the sensor node
 What you will need:
 
 Processors
-- 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) or
+- 1 x [ESP32 module](https://wiki.wemos.cc/products:lolin32:lolin32_lite) or any kind of micro controller
 
 Sensors
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
@@ -32,9 +33,9 @@ Other
 - USB-to-MicroUSB cable
 - 5V power source
 - Ethernet cable (RASPI only)
-- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun
+- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun, double sided tape, magnets (e.g. from old HDD's), USB car adapter and cable (long) for in-vehicle 12V power supply, USB power bank (10000mAh) for mobile power supply
 
-## Setting up the Raspberry Pi
+## First prototype sensor based on the Raspberry Pi for static PM and temp readings with output via console
 1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
 2. Write the image to the SD card by following the official guide at https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 3. Create an empty file named "ssh" (simple textfile) on the boot partition of the microSD card (to enable the SSH server)
@@ -82,28 +83,20 @@ Other
 - Depending on your command skills, use either **wget** to transfer the file or **git clone** to copy the complete directory onto the RASPI.
 8. Run it, to check if everything works as expected: **python sensortest.py**. Use CTRL-C to exit the program.
 
-If you see valid data received from both sensors: congratulations, you've build yourself a sensor node!
+If you see valid data received from both sensors: congratulations, you've build yourself a RASPI based sensor node!
 
-# Creating the sensor node
+## Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
+
+# Case manufacturing
 With the help of a 3D printer, enclosures for the prototype sensors have been designed and remain work in progress. The housing is expected to be mounted to various mobile devices. Various interfacing base plates should be designed to allow for simple connection of the sensor to bicycles, cars and other mobile vehicles.
 
-## STL files
+## STL files (to be updated)
 1. Interface plate [vehicle](https://www.tinkercad.com/things/4Xz4JrNgmcE/editv2?sharecode=PCdHlDFncot4dArcW4hcWTQBgAOv3JHcGKH7myIfJUY=)
 2. Interface plate bicycle [steering tube 57.2mm](https://www.tinkercad.com/things/jzmpo4tGQez/editv2?sharecode=1q4hmiGckp7A3iOZSZWTwA4aEF93UhBmeYaSY_0_uzE=)
 3. Interface plate bicycle [seat post. 27.3mm](https://www.tinkercad.com/things/e2KdwUPzHp4-air-quality-bottom-adaptor-bike-seat-post-273mm/editv2?sharecode=tH-ZwkKY2VoDqsauvy4q2hLqFmQomjW-M0TOkkHZojo=)
 4. Base plate [RASPI 3 model B](https://www.tinkercad.com/things/1gGCnCky6An-spectacular-allis/edit?&sharecode=RH8EePABKeKxCpGJCp6Acry-V-7am-ZyMxsMLUgiqa0=)
 5. Cover RASPI [3 model B](https://www.tinkercad.com/things/88hw1V2CLJA/editv2?sharecode=Jthvr0qztWBviDRTiyt8R4J0hbHZ-XgIrdv957fNIdI=)
 6. Cover [BME and HONEYWELL sensor](https://www.tinkercad.com/things/6zZtiDeTbDL/editv2?sharecode=hv0o3lNThIFnXw16Q4WmttxLdtT7ksC8-y0OA-khdSg=)
-
-## Other material
-- hot glue
-- double side tape
-- cable ties
-- magnets (e.g. from old HDD's)
-- shrinking tube
-- USB car adapter and cable (long) for in-vehicle 12V power supply
-- USB power bank and cable (short) for any mobile utilization
-- ....
 
 # Collection of real time data using *airq_logger.py*
 to be added
