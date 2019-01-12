@@ -10,16 +10,20 @@ For this project files can be organized in directories. A new directory can be c
 
 # Building the sensor node (Prototypes #1-#4)
 What you will need:
+Processors
 - 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+Sensors
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
-- 1 x microSD card (at least 8 GB)
-- 1 x Molex 51021-0800 pigtail ([for example](https://www.mouser.de/))
+- 1 x [MICS-2714 or -4514 or -6414 gas sensor] (https://www.sgxsensortech.com/sensor-selector/)
+Other
+- 1 x microSD card (at least 8 GB, RASPI only)
+- 1 x Molex 51021-0800 pigtail ([for example](https://www.mouser.de/) to connect the PM sesnor)
 - DuPont female-female jumper cables ([for example](https://www.amazon.de/Aukru-20cm-female-female-Steckbr%C3%BCcken-Drahtbr%C3%BCcken/dp/B00OL6JZ3C))
 - USB-to-MicroUSB cable
 - 5V power source
-- Ethernet cable
-- Soldering iron and some shrink tubes
+- Ethernet cable (RASPI only)
+- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun
 
 ## Setting up the Raspberry Pi
 1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
