@@ -1,6 +1,6 @@
 /***************************************************************************
   Geotab Airquality BLE Beacon - ESP32 edition v1.1
-  Measured values: Temperature, Humidity, Barometric pressure, PM 2.5, PM 10
+  Measured values: Temperature, Humidity, Barometric pressure, PM 2.5, PM 10, NO2
     
   Sources:
   - ESP32 libraries: https://github.com/espressif/arduino-esp32
@@ -8,7 +8,7 @@
   - Adafruit BME280 library: https://github.com/adafruit/Adafruit_BME280_Library
   - Felix Galindos HPMA115S0 library: https://github.com/felixgalindo/HPMA115S0
 
-  29.12.2018 - Tamás Halbrucker
+  20.01.2019 - Tamás Halbrucker
  ***************************************************************************/
 
 // Libraries to be included
@@ -28,8 +28,11 @@ HPMA115S0 hpma115S0(MySerial);
 Adafruit_BME280 bme;
 // Onboard LED
 unsigned int LED = 2;
+// ADC pin for the NO2 sensor input
+unsigned int NO2pin = A0; // A0 = GPIO36 = VP on the board
 
 void setup() {
+  pinMode(NO2pin, INPUT);
   pinMode(LED, OUTPUT);
   // Debug serial output
   Serial.begin(115200);
@@ -91,8 +94,15 @@ void setup() {
     Serial.println("PM 10: " + String(pm10) + " ug/m3" );
   }
 
+  // Reading the value of the NO2 sensor output
+  unsigned int no2input = analogRead(NO2pin);
+  float no2fval = no2input * 3.3 / 4095;
+  Serial.print("NO2 sensor voltage: ");
+  Serial.println(no2fval);
+  byte* no2array = (byte*) &no2fval;
+  
   // Building the payload
-  char manfdata[21];
+  char manfdata[25];
   // Geotab company ID
   manfdata[0]= 0x75;
   manfdata[1]= 0x02;
@@ -118,13 +128,18 @@ void setup() {
   manfdata[15]= pressarray[2];
   manfdata[16]= pressarray[3];
   // PM 2.5
-  manfdata[17]= 0xE6;
+  manfdata[17]= 0x0D;
   manfdata[18]= pm2_5;
   // PM 10
-  manfdata[19]= 0xE7;
+  manfdata[19]= 0x0E;
   manfdata[20]= pm10;
-
-  for (int i = 0; i < 21; ++i) {
+  // NO2
+  manfdata[21]= 0x10;
+  manfdata[22]= no2array[1];
+  manfdata[23]= no2array[2];
+  manfdata[24]= no2array[3];
+  
+  for (int i = 0; i < 25; ++i) {
    Serial.print(manfdata [i], HEX);
    Serial.print(" ");
   }
