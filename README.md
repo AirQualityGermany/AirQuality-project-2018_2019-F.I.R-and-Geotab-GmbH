@@ -33,7 +33,7 @@ Other
 - USB-to-MicroUSB cable
 - 5V power source
 - Ethernet cable (RASPI only)
-- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun, double sided tape, magnets (e.g. from old HDD's), USB car adapter and cable (long) for in-vehicle 12V power supply, USB power bank (10000mAh) for mobile power supply
+- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun, double sided tape, magnets (e.g. from old HDD's), USB car adapter and cable (long) for ##in-vehicle## power supply, step down (12-24V, 3-5V out) for ##ex-vehicle power supply, USB power bank (10000mAh) for mobile power supply
 
 ## First prototype sensor based on the Raspberry Pi for static PM and temp readings with output via console
 1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
