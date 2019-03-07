@@ -94,6 +94,14 @@ void setup() {
     Serial.println("PM 10: " + String(pm10) + " ug/m3" );
   }
 
+  float pm2_5fval = pm2_5;
+  float pm10fval = pm10;
+  Serial.println(pm2_5fval);
+  Serial.println(pm10fval);
+  
+  byte* pm2_5array = (byte*) &pm2_5fval;
+  byte* pm10array = (byte*) &pm10fval;
+  
   // Reading the value of the NO2 sensor output
   unsigned int no2input = analogRead(NO2pin);
   float no2fval = no2input * 3.3 / 4095;
@@ -129,10 +137,14 @@ void setup() {
   manfdata[16]= pressarray[3];
   // PM 2.5
   manfdata[17]= 0x0D;
-  manfdata[18]= pm2_5;
+  manfdata[18]= pm2_5array[1];
+  manfdata[19]= pm2_5array[2];
+  manfdata[20]= pm2_5array[3];
   // PM 10
-  manfdata[19]= 0x0E;
-  manfdata[20]= pm10;
+  //manfdata[21]= 0x0E;
+  //manfdata[22]= pm10array[1];
+  //manfdata[23]= pm10array[2];
+  //manfdata[24]= pm10array[3];
   // NO2
   manfdata[21]= 0x10;
   manfdata[22]= no2array[1];
@@ -145,7 +157,7 @@ void setup() {
   }
 
   // Setting the payload for the advertisement data
-  advertisementData.setManufacturerData(std::string(manfdata, 21));
+  advertisementData.setManufacturerData(std::string(manfdata, 25));
   pAdvertising->setAdvertisementData(advertisementData);
   digitalWrite(LED, LOW);
 
