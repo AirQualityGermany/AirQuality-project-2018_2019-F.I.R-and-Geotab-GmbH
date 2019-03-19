@@ -52,8 +52,8 @@ Other
   - expand the file system
 7. If you're done with the configuration, restart the Pi with **sudo reboot now**. Check if all the changes are correct, then shut down it with **sudo shutdown now**, and remove the power cable.
 
-## Hooking up the sensors
-### BME280
+### Hooking up the sensors
+#### BME280
 1. Solder the headers to the sensor PCB as shown in https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/assembly
 2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor):
 - *3V3* (PIN 1) to sensor *VIN*
@@ -61,7 +61,7 @@ Other
 - *SCL* (GPIO 3, PIN 5) to sensor *SCK*
 - *SDA* (GPIO 2, PIN 3) to sensor *SDI*
 
-### Honeywell HPMA115S0
+#### Honeywell HPMA115S0
 1. To make the wiring more straightforward, create a Molex-DuPont connector cable for the sensor. (Please see the [Datasheet](http://www.farnell.com/datasheets/2313714.pdf) for reference.)
 - remove 4 cables from your 8 pin Molex pigtail (from right to left: pin 1, 3, 4 and 5)
 - cut the DuPont connector from one end of 4 DuPont jumper wires
@@ -72,7 +72,7 @@ Other
 - *TXD* (GPIO 14, PIN 8) to sensor *Pin 7*
 - *GND* (PIN 4) to sensor *Pin 8*
 
-## Testing the sensors using *sensortext.py*
+### Testing the sensors using *sensortext.py*
 1. Boot up your Pi again, log in via SSH, and update it with the following command: **sudo apt-get update && sudo apt-get upgrade**
 2. Install the Adafruit Python GPIO library: https://github.com/adafruit/Adafruit_Python_GPIO (check link for installation instructions)
 3. Install the Adafruit BME280 library: https://github.com/adafruit/Adafruit_Python_BME280 (you can now use **git clone** command to install this library.)
@@ -113,6 +113,9 @@ If you see valid data received from both sensors: congratulations, you've build 
 - *RXD* to sensor *Pin 6*
 - *TXD* to sensor *Pin 7*
 - *GND* to sensor *Pin 8*
+
+## Testing the sensors using *xx*
+to be added
 
 # Case manufacturing
 With the help of a 3D printer, enclosures for the prototype sensors have been designed and remain work in progress. The housing is expected to be mounted to various mobile devices. Various interfacing base plates should be designed to allow for simple connection of the sensor to bicycles, cars and other mobile vehicles.
