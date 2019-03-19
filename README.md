@@ -1,4 +1,4 @@
-# Cooperation-RWTH-and-Geotab
+# Cooperation-F.i.R. (Center Smart Services) Geotab
 Repository created to host any SW development activities around the Air Quality project between f.i.r and Geotab
 
 # Github -Working with Directories
@@ -21,6 +21,7 @@ Sensors
 - 1 x [SGX Sensortech MICS-2714 or -4514 or -6414 gas sensors](https://www.sgxsensortech.com/sensor-selector/)
   - [e-Bay](www.e-bay.com)
     - (search for MICS-6814 Carbon Monoxide Nitrogen Oxygen Compact Sensor CO/NO2/NH3 Gas Sensor or similar)
+    - (pinout available for -4514 only)
   - [Banggood](www.banggood.com)
     - (search for "CJMCU-4541 MICS-4514 Carbon Monoxide Nitrogen Oxygen Sensor CO/NO2/H2/NH3/CH4" or similar)
   - [Cooking Hacks](https://www.cooking-hacks.com/no2-gas-sensor-7596)
@@ -54,22 +55,22 @@ Other
 ## Hooking up the sensors
 ### BME280
 1. Solder the headers to the sensor PCB as shown in https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/assembly
-2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Color code and Pinout examples for RASPI 3 Model B:
-- Pi *3V3* (PIN 1) to sensor *VIN*, red cable
-- Pi *GND* (PIN 9) to sensor *GND*, Brown cable
-- Pi *SCL* (GPIO 3, PIN 5) to sensor *SCK*, Orange cable
-- Pi *SDA* (GPIO 2, PIN 3) to sensor *SDI*, Yellow cable
+2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor):
+- *3V3* (PIN 1) to sensor *VIN*
+- *GND* (PIN 9) to sensor *GND*
+- *SCL* (GPIO 3, PIN 5) to sensor *SCK*
+- *SDA* (GPIO 2, PIN 3) to sensor *SDI*
 
 ### Honeywell HPMA115S0
 1. To make the wiring more straightforward, create a Molex-DuPont connector cable for the sensor. (Please see the [Datasheet](http://www.farnell.com/datasheets/2313714.pdf) for reference.)
 - remove 4 cables from your 8 pin Molex pigtail (from right to left: pin 1, 3, 4 and 5)
 - cut the DuPont connector from one end of 4 DuPont jumper wires
 - splice the 4 remaining wires (pin 2, 6, 7 and 8) of your Molex pigtail to the jumper wires
-2. Plug the Molex side of your connector cable to the sensor, and connect it to the Raspberry Pi via the following table:
-- Pi *5V* (PIN 4) to sensor *Pin 2*, purple cable
-- Pi *RXD* (GPIO 15, PIN 10) to sensor *Pin 6*, grey cable
-- Pi *TXD* (GPIO 14, PIN 8) to sensor *Pin 7*, white cable
-- Pi *GND* (PIN 4) to sensor *Pin 8*, black cable
+2. Plug the Molex side of your connector cable to the sensor, and connect it to the Raspberry Pi via the following table (Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor)):
+- *5V* (PIN 4) to sensor *Pin 2*
+- *RXD* (GPIO 15, PIN 10) to sensor *Pin 6*
+- *TXD* (GPIO 14, PIN 8) to sensor *Pin 7*
+- *GND* (PIN 4) to sensor *Pin 8*
 
 ## Testing the sensors using *sensortext.py*
 1. Boot up your Pi again, log in via SSH, and update it with the following command: **sudo apt-get update && sudo apt-get upgrade**
@@ -86,6 +87,32 @@ Other
 If you see valid data received from both sensors: congratulations, you've build yourself a RASPI based sensor node!
 
 ## Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
+
+1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
+2. Write the image to the SD card by following the official guide at https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+3. Create an empty file named "ssh" (simple textfile) on the boot partition of the microSD card (to enable the SSH server)
+4. Plug the microSD card in the Raspberry Pi, connect it via Ethernet to your local network, and power it up using the microUSB cable
+5. After it's
+
+## Hooking up the sensors
+### BME280
+1. Solder the headers to the sensor PCB as shown in https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/assembly
+2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor):
+- *3V3* to sensor *VIN*
+- *GND* to sensor *GND*
+- *SCL* to sensor *SCK*
+- *SDA* to sensor *SDI*
+
+### Honeywell HPMA115S0
+1. To make the wiring more straightforward, create a Molex-DuPont connector cable for the sensor. (Please see the [Datasheet](http://www.farnell.com/datasheets/2313714.pdf) for reference.)
+- remove 4 cables from your 8 pin Molex pigtail (from right to left: pin 1, 3, 4 and 5)
+- cut the DuPont connector from one end of 4 DuPont jumper wires
+- splice the 4 remaining wires (pin 2, 6, 7 and 8) of your Molex pigtail to the jumper wires
+2. Plug the Molex side of your connector cable to the sensor, and connect it to the Raspberry Pi via the following table (Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor)):
+- *5V* to sensor *Pin 2*
+- *RXD* to sensor *Pin 6*
+- *TXD* to sensor *Pin 7*
+- *GND* to sensor *Pin 8*
 
 # Case manufacturing
 With the help of a 3D printer, enclosures for the prototype sensors have been designed and remain work in progress. The housing is expected to be mounted to various mobile devices. Various interfacing base plates should be designed to allow for simple connection of the sensor to bicycles, cars and other mobile vehicles.
