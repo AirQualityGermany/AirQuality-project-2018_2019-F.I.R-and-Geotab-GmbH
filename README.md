@@ -88,11 +88,7 @@ If you see valid data received from both sensors: congratulations, you've build 
 
 ## Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
 
-1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
-2. Write the image to the SD card by following the official guide at https://www.raspberrypi.org/documentation/installation/installing-images/README.md
-3. Create an empty file named "ssh" (simple textfile) on the boot partition of the microSD card (to enable the SSH server)
-4. Plug the microSD card in the Raspberry Pi, connect it via Ethernet to your local network, and power it up using the microUSB cable
-5. After it's
+See separate Readme inside ESP32 folder
 
 ## Hooking up the sensors
 ### BME280
