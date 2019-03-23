@@ -89,6 +89,7 @@ If you see valid data received from both sensors: congratulations, you've build 
 ## Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
 
 See separate Readme inside ESP32 folder
+See this [article](https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use) to learn more about downloading libraries on the ARDUINO
 
 ## Hooking up the sensors
 ### BME280
