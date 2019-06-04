@@ -12,6 +12,6 @@ You're done with that step.
   * Adafruit Sensor library: https://github.com/adafruit/Adafruit_Sensor
   * Adafruit BME280 library: https://github.com/adafruit/Adafruit_BME280_Library
   * The modified version of Felix Galindos HPMA115S0 library from this repository
-5. Upload the code (ESP32_BME280_HPM_Beacon_v1.1.ino) to the LOLIN32 board
+5. Upload the code (Geotab_AirQuality_Beacon_v1.2.ino) to the LOLIN32 board
 
 You'll find a great documentation about libary installation here: https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use
