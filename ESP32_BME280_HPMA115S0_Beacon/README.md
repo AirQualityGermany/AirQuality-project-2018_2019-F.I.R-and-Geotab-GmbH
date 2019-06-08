@@ -2,7 +2,7 @@
 
 1. Install the latest Arduino IDE: https://www.arduino.cc/
 2. Install the ESP32 Arduino Core: https://github.com/espressif/arduino-esp32
-3. Replace the BLEAdvertising.h file with the one from this repository
+3. Replace the BLEAdvertising.h file with the one from this repository:
 Search for the file named "BLEAdvertising.h" on your computer:
 The one you are looking for is the one located in the Arduino...\packages\esp32\... folder.
 This is the file that needs to be replaced. So download the replacement file from the repository and save it to some temporary location. (Select "Raw" to be able to save the file with your browser)
