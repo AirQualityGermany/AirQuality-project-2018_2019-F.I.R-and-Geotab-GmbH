@@ -14,4 +14,4 @@ You're done with that step.
   * The modified version of Felix Galindos HPMA115S0 library from this repository: https://github.com/felixgalindo/HPMA115S0
 5. Upload the code (Geotab_AirQuality_Beacon_v1.2.ino) to the LOLIN32 board
 
-You'll find a great documentation about libary installation here: https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use
+You'll find a great documentation about library installation under: https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use
