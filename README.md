@@ -14,7 +14,68 @@ What you will need:
 - 5V power source
 - Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun, double sided tape, magnets (e.g. from old HDD's), USB car adapter and cable (long) for **in-vehicle** power supply, step down (12-24V, 3-5V out) for **ex-vehicle** power supply, USB power bank (10000mAh) for mobile power supply
 
-## (2018 RASPI version) First prototype sensor for static PM and temp readings with output via console
+## 2020 - Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
+Processors
+- 1 x [ESP32 module](https://wiki.wemos.cc/products:lolin32:lolin32_lite) or any kind of micro controller
+
+Sensors
+- 1 x PCB
+- - 2 x [PMS5003 particle sensor]()
+- 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
+- Cabling to connect sensors with controller board
+- Vaccum pump
+- Clear tubing for vaccum pump
+- 2 x Step down converter
+- Cabling to connect vacuum pump with step down converters
+- Vaccumbox (.stl file via: )
+- 2 x FESTO connectors
+- Nylon tube
+
+Other
+1. See separate Readme inside ESP32 folder
+2. See this [article](https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use) to learn more about downloading libraries on the ARDUINO
+
+## Hooking up the sensors
+### BME280
+1. Solder the headers to the sensor PCB as shown in https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/assembly
+2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor):
+- *3V3* to sensor *VIN*
+- *GND* to sensor *GND*
+- *SCL* to sensor *SCK*
+- *SDA* to sensor *SDI*
+
+### Honeywell HPMA115S0
+1. To make the wiring more straightforward, create a Molex-DuPont connector cable for the sensor. (Please see the [Datasheet](http://www.farnell.com/datasheets/2313714.pdf) for reference.)
+- remove 4 cables from your 8 pin Molex pigtail (from right to left: pin 1, 3, 4 and 5)
+- cut the DuPont connector from one end of 4 DuPont jumper wires
+- splice the 4 remaining wires (pin 2, 6, 7 and 8) of your Molex pigtail to the jumper wires
+2. Plug the Molex side of your connector cable to the sensor, and connect it to the Raspberry Pi via the following table (Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor)):
+- *5V* to sensor *Pin 2*
+- *RXD* to sensor *Pin 6*
+- *TXD* to sensor *Pin 7*
+- *GND* to sensor *Pin 8*
+
+## Testing the sensors using *xx*
+to be added
+
+# Case manufacturing
+With the help of a 3D printer, enclosures for the prototype sensors have been designed and remain work in progress. The housing is expected to be mounted to various mobile devices. Various interfacing base plates should be designed to allow for simple connection of the sensor to bicycles, cars and other mobile vehicles.
+
+## STL files (to be updated)
+1. Interface plate [vehicle](https://www.tinkercad.com/things/4Xz4JrNgmcE/editv2?sharecode=PCdHlDFncot4dArcW4hcWTQBgAOv3JHcGKH7myIfJUY=)
+2. Interface plate bicycle [steering tube 57.2mm](https://www.tinkercad.com/things/jzmpo4tGQez/editv2?sharecode=1q4hmiGckp7A3iOZSZWTwA4aEF93UhBmeYaSY_0_uzE=)
+3. Interface plate bicycle [seat post. 27.3mm](https://www.tinkercad.com/things/e2KdwUPzHp4-air-quality-bottom-adaptor-bike-seat-post-273mm/editv2?sharecode=tH-ZwkKY2VoDqsauvy4q2hLqFmQomjW-M0TOkkHZojo=)
+4. Base plate [RASPI 3 model B](https://www.tinkercad.com/things/1gGCnCky6An-spectacular-allis/edit?&sharecode=RH8EePABKeKxCpGJCp6Acry-V-7am-ZyMxsMLUgiqa0=)
+5. Cover RASPI [3 model B](https://www.tinkercad.com/things/88hw1V2CLJA/editv2?sharecode=Jthvr0qztWBviDRTiyt8R4J0hbHZ-XgIrdv957fNIdI=)
+6. Cover [BME and HONEYWELL sensor](https://www.tinkercad.com/things/6zZtiDeTbDL/editv2?sharecode=hv0o3lNThIFnXw16Q4WmttxLdtT7ksC8-y0OA-khdSg=)
+
+# Collection of real time data using *airq_logger.py*
+to be added
+
+# Making the sensor mobile, i.e. power plug independent
+to be added
+
+## 2018 RASPI version - First prototype sensor for static PM and temp readings with output via console
 Processors
 - 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - 1 x microSD card (at least 8 GB, RASPI only)
@@ -77,64 +138,4 @@ Sensors
 
 If you see valid data received from both sensors: congratulations, you've build yourself a RASPI based sensor node!
 
-## Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
-Processors
-- 1 x [ESP32 module](https://wiki.wemos.cc/products:lolin32:lolin32_lite) or any kind of micro controller
-
-Sensors
-- 1 x PCB
-- - 2 x [PMS5003 particle sensor]()
-- 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
-- Cabling to connect sensors with controller board
-- Vaccum pump
-- Clear tubing for vaccum pump
-- 2 x Step down converter
-- Cabling to connect vacuum pump with step down converters
-- Vaccumbox (.stl file via: )
-- 2 x FESTO connectors
-- Nylon tube
-
-Other
-1. See separate Readme inside ESP32 folder
-2. See this [article](https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use) to learn more about downloading libraries on the ARDUINO
-
-## Hooking up the sensors
-### BME280
-1. Solder the headers to the sensor PCB as shown in https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/assembly
-2. Use four DuPont jumper wires to connect the sensor to the Raspberry Pi via I2C. (See "Raspberry Pi wired with I2C" on https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test#python-computer-wiring-5-5. Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor):
-- *3V3* to sensor *VIN*
-- *GND* to sensor *GND*
-- *SCL* to sensor *SCK*
-- *SDA* to sensor *SDI*
-
-### Honeywell HPMA115S0
-1. To make the wiring more straightforward, create a Molex-DuPont connector cable for the sensor. (Please see the [Datasheet](http://www.farnell.com/datasheets/2313714.pdf) for reference.)
-- remove 4 cables from your 8 pin Molex pigtail (from right to left: pin 1, 3, 4 and 5)
-- cut the DuPont connector from one end of 4 DuPont jumper wires
-- splice the 4 remaining wires (pin 2, 6, 7 and 8) of your Molex pigtail to the jumper wires
-2. Plug the Molex side of your connector cable to the sensor, and connect it to the Raspberry Pi via the following table (Pinout examples for RASPI 3 Model B (when using a different development board, please check the board pinout when connecting to the sensor)):
-- *5V* to sensor *Pin 2*
-- *RXD* to sensor *Pin 6*
-- *TXD* to sensor *Pin 7*
-- *GND* to sensor *Pin 8*
-
-## Testing the sensors using *xx*
-to be added
-
-# Case manufacturing
-With the help of a 3D printer, enclosures for the prototype sensors have been designed and remain work in progress. The housing is expected to be mounted to various mobile devices. Various interfacing base plates should be designed to allow for simple connection of the sensor to bicycles, cars and other mobile vehicles.
-
-## STL files (to be updated)
-1. Interface plate [vehicle](https://www.tinkercad.com/things/4Xz4JrNgmcE/editv2?sharecode=PCdHlDFncot4dArcW4hcWTQBgAOv3JHcGKH7myIfJUY=)
-2. Interface plate bicycle [steering tube 57.2mm](https://www.tinkercad.com/things/jzmpo4tGQez/editv2?sharecode=1q4hmiGckp7A3iOZSZWTwA4aEF93UhBmeYaSY_0_uzE=)
-3. Interface plate bicycle [seat post. 27.3mm](https://www.tinkercad.com/things/e2KdwUPzHp4-air-quality-bottom-adaptor-bike-seat-post-273mm/editv2?sharecode=tH-ZwkKY2VoDqsauvy4q2hLqFmQomjW-M0TOkkHZojo=)
-4. Base plate [RASPI 3 model B](https://www.tinkercad.com/things/1gGCnCky6An-spectacular-allis/edit?&sharecode=RH8EePABKeKxCpGJCp6Acry-V-7am-ZyMxsMLUgiqa0=)
-5. Cover RASPI [3 model B](https://www.tinkercad.com/things/88hw1V2CLJA/editv2?sharecode=Jthvr0qztWBviDRTiyt8R4J0hbHZ-XgIrdv957fNIdI=)
-6. Cover [BME and HONEYWELL sensor](https://www.tinkercad.com/things/6zZtiDeTbDL/editv2?sharecode=hv0o3lNThIFnXw16Q4WmttxLdtT7ksC8-y0OA-khdSg=)
-
-# Collection of real time data using *airq_logger.py*
-to be added
-
-# Making the sensor mobile, i.e. power plug independent
-to be added
 
