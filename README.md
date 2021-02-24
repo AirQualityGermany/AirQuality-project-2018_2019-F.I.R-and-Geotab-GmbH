@@ -20,16 +20,20 @@ Processors
 
 Sensors
 - 1 x PCB
-- - 2 x [PMS5003 particle sensor]()
+- 2 x [PMS5003 particle sensor]()
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
+
+Other
 - Cabling to connect sensors with controller board
-- Vaccum pump
+- 1 x Vaccum pump
 - Clear tubing for vaccum pump
 - 2 x Step down converter
 - Cabling to connect vacuum pump with step down converters
+- Cabling to connect the sensor to the external power supply (should be dimensioned to carry around 1A and 12V to 24V) (https://de.farnell.com/van-damme/268006c/kabel-balanced-patch-schwarz-per/dp/1891090?CMP=i-bf9f-00001000)
 - Vaccumbox (.stl file via: )
 - 2 x FESTO connectors
 - Nylon tube
+- 1 x Watertight case (e.g. https://de.farnell.com/multicomp/g3113/geh-use-abs-ip65-200x120x90mm/dp/1526655?CMP=i-bf9f-00001000)
 
 Other
 1. See separate Readme inside ESP32 folder
