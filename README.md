@@ -8,7 +8,7 @@ For this project files can be organized in directories. A new directory can be c
 - Type '..' and then "/" to jump upwards one directory.
 - Use the backspace key to edit the parent directory's name. (https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser)
 
-# Building the sensor node
+# Building the sensor node (2018 RASPI version)
 What you will need:
 
 Processors
