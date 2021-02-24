@@ -8,13 +8,17 @@ For this project files can be organized in directories. A new directory can be c
 - Type '..' and then "/" to jump upwards one directory.
 - Use the backspace key to edit the parent directory's name. (https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser)
 
-# Building the sensor node (2018 RASPI version)
+# Building the sensor node
 What you will need:
+- USB-to-MicroUSB cable
+- 5V power source
+- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun, double sided tape, magnets (e.g. from old HDD's), USB car adapter and cable (long) for **in-vehicle** power supply, step down (12-24V, 3-5V out) for **ex-vehicle** power supply, USB power bank (10000mAh) for mobile power supply
 
+## (2018 RASPI version) First prototype sensor for static PM and temp readings with output via console
 Processors
-- 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) or
-- 1 x [ESP32 module](https://wiki.wemos.cc/products:lolin32:lolin32_lite) or any kind of micro controller
-
+- 1 x [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- 1 x microSD card (at least 8 GB, RASPI only)
+- Ethernet cable (RASPI only)
 Sensors
 - 1 x [Honeywell HPMA115S0 particle sensor](http://www.farnell.com/datasheets/2313714.pdf)
 - 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
@@ -24,19 +28,6 @@ Sensors
     - (pinout available for -4514 only)
   - [Banggood](www.banggood.com)
     - (search for "CJMCU-4541 MICS-4514 Carbon Monoxide Nitrogen Oxygen Sensor CO/NO2/H2/NH3/CH4" or similar)
-  - [Cooking Hacks](https://www.cooking-hacks.com/no2-gas-sensor-7596)
-  - Alternative companies offer a variety of individual boards (e.g. SEEED, LIBELIUM etc.) where it seems that any board related to detecting NO2 or similar gases is making use of the SGX Senortech sensors.
-
-Other
-- 1 x microSD card (at least 8 GB, RASPI only)
-- 1 x Molex 51021-0800 pigtail ([for example](https://www.mouser.de/) to connect the PM sesnor)
-- DuPont female-female jumper cables ([for example](https://www.amazon.de/Aukru-20cm-female-female-Steckbr%C3%BCcken-Drahtbr%C3%BCcken/dp/B00OL6JZ3C))
-- USB-to-MicroUSB cable
-- 5V power source
-- Ethernet cable (RASPI only)
-- Maker equipment like soldering iron, cable, shrinking cable, cable ties, hotglue, super glue, heating gun, double sided tape, magnets (e.g. from old HDD's), USB car adapter and cable (long) for **in-vehicle** power supply, step down (12-24V, 3-5V out) for **ex-vehicle** power supply, USB power bank (10000mAh) for mobile power supply
-
-## First prototype sensor based on the Raspberry Pi for static PM and temp readings with output via console
 1. Download the latest RASPBIAN STRETCH LITE image from https://www.raspberrypi.org/downloads/raspbian/
 2. Write the image to the SD card by following the official guide at https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 3. Create an empty file named "ssh" (simple textfile) on the boot partition of the microSD card (to enable the SSH server)
@@ -87,7 +78,23 @@ Other
 If you see valid data received from both sensors: congratulations, you've build yourself a RASPI based sensor node!
 
 ## Mobile sensor based on ESP32 controller for PM, NO2-gas and temp readings, using a LE-BT connection to Geotab Go7 telematic device and the MyGeotab cloud environment
+Processors
+- 1 x [ESP32 module](https://wiki.wemos.cc/products:lolin32:lolin32_lite) or any kind of micro controller
 
+Sensors
+- 1 x PCB
+- - 2 x [PMS5003 particle sensor]()
+- 1 x [Bosch BME280 environmental sensor](https://www.adafruit.com/product/2652)
+- Cabling to connect sensors with controller board
+- Vaccum pump
+- Clear tubing for vaccum pump
+- 2 x Step down converter
+- Cabling to connect vacuum pump with step down converters
+- Vaccumbox (.stl file via: )
+- 2 x FESTO connectors
+- Nylon tube
+
+Other
 1. See separate Readme inside ESP32 folder
 2. See this [article](https://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use) to learn more about downloading libraries on the ARDUINO
 
